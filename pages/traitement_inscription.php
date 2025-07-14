@@ -7,6 +7,6 @@
     $mdp=$_POST['mdp'];
     $ville=$_POST['ville'];
 
-
+    insert_membre($email,$nom,$genre,$naissance,$ville,$mdp);
 
 ?>

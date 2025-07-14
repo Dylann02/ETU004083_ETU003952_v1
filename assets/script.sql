@@ -92,4 +92,9 @@ INSERT INTO emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (3, 4, '2025-07-07', '2025-07-13'),
 (14, 3, '2025-07-07', '2025-07-14');
 
+create or replace view affiche_liste_objet as
+select * from objet JOIN emprunt ON objet.id_objet = emprunt.id_objet
+; 
+
+
 

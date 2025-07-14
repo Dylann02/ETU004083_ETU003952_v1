@@ -12,6 +12,8 @@
     <form action="traitement_login.php" method="post">
         <p>Email : <input type="enail" name="email" placeholder="entrer votre email"></p>
         <p>Mots de passe : <input type="password" name="mdp" placeholder="entrer votre mots de passe"></p>
+        <input type="submit" value="valider">
     </form>
+    <a href="signin.php">creer un compte</a>
 </body>
 </html>
