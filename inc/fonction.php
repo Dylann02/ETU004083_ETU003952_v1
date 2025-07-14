@@ -28,7 +28,10 @@
 
     function liste_objet()
     {
-        $requ
+        $requete = "SELECT * FROM affiche_liste_objet";
+        $result = $result = mysqli_query(dbconnect(),$requete);
+
+        return $result;
     }
 
 ?>

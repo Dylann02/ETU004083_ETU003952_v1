@@ -93,8 +93,24 @@ INSERT INTO emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (14, 3, '2025-07-07', '2025-07-14');
 
 create or replace view affiche_liste_objet as
-select * from objet JOIN emprunt ON objet.id_objet = emprunt.id_objet
+select 
+    objet.id_objet, 
+    objet.id_categorie,
+    objet.nom_objet as objet,
+    emprunt.date_emprunt as date_emprunt,
+    emprunt.id_emprunt,
+    emprunt.date_retour as date_retour
+    from objet LEFT JOIN emprunt 
+    ON objet.id_objet = emprunt.id_objet
 ; 
+
+create or replace view affiche_filtre as 
+select 
+    categorie_objet.nom_categorie as categorie_objet,
+    objet.nom_objet as objet
+from objet JOIN categorie_objet ON objet.id_categorie = categorie_objet.id_categorie;
+
+
 
 
 
