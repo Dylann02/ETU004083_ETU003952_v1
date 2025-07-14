@@ -95,7 +95,7 @@ INSERT INTO emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 create or replace view affiche_liste_objet as
 select 
     objet.id_objet, 
-    objet.id_categorie,
+    objet.id_categorie id_categorie,
     objet.nom_objet as objet,
     emprunt.date_emprunt as date_emprunt,
     emprunt.id_emprunt,
@@ -107,8 +107,11 @@ select
 create or replace view affiche_filtre as 
 select 
     categorie_objet.nom_categorie as categorie_objet,
-    objet.nom_objet as objet
+    objet.nom_objet as objet,
+    objet.id_categorie as id_categorie
 from objet JOIN categorie_objet ON objet.id_categorie = categorie_objet.id_categorie;
+
+
 
 
 

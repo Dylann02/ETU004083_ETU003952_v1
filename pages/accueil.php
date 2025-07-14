@@ -1,6 +1,13 @@
 <?php
     include('../inc/fonction.php');
-    $liste = liste_objet();
+    $categories=get_categorie();
+    if(isset($_POST['categorie'])){
+        $categorie=$_POST['categorie'];
+    }else{
+        $categorie='TOUS';
+    }
+    $liste = filtre($categorie);
+    // echo $categorie;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +26,15 @@
             <h1 class="h3">Liste des objets empruntés</h1>
         </div>
     </header>
-
+    <form action="accueil.php" method="post">
+        <select name="categorie">
+            <option value="TOUS">TOUS</option>
+            <?php while($categorie_objet=mysqli_fetch_assoc($categories)) { ?>
+                <option value="<?php echo $categorie_objet['nom_categorie'];?>"><?php echo $categorie_objet['nom_categorie'];?></option>
+            <?php }?>
+        </select>
+        <input type="submit" value="trier">
+    </form>
     <main class="container">
         <div class="row g-4">
             <?php while($objet = mysqli_fetch_assoc($liste)) { ?>
