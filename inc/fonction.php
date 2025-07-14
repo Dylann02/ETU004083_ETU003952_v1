@@ -64,4 +64,10 @@
        
     }
 
+    function get_image($id_objet){
+        $requete = "SELECT * FROM images_objet WHERE id_objet = '$id_objet'";
+        $result = mysqli_query(dbconnect(),$requete);
+
+        return $result;
+    }
 ?>

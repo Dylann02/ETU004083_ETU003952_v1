@@ -108,8 +108,10 @@ create or replace view affiche_filtre as
 select 
     categorie_objet.nom_categorie as categorie_objet,
     objet.nom_objet as objet,
+    objet.id_objet as id_objet,
     objet.id_categorie as id_categorie
 from objet JOIN categorie_objet ON objet.id_categorie = categorie_objet.id_categorie;
+
 
 
 

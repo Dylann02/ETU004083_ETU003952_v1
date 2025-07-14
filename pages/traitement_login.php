@@ -1,4 +1,5 @@
 <?php
+session_start();
    include('../inc/fonction.php');
    
    $email =$_POST['email'];
@@ -11,6 +12,7 @@
    {
       if($verif['email'] == $membre['email'] && $verif['mdp'] = $membre['mdp'])
       {
+         $_SESSION['id_membre']=$verif['id_membre'];
          header('location:accueil.php');
       }
    }

@@ -25,7 +25,7 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
     .left {
-      background-color:blue;
+      background-color:#0d6efd;
       color: white;
       padding: 40px;
       flex: 1;
@@ -43,7 +43,7 @@
       border-bottom-right-radius: 10px;
     }
     .btn-purple {
-      background-color: blue;
+      background-color:#0d6efd;
       color: white;
     }
   </style>
