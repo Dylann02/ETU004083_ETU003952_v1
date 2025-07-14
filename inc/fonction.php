@@ -70,4 +70,11 @@
 
         return $result;
     }
+
+    function count_emprunt_by_membre($id_membre) {
+        $requete = "SELECT COUNT(*) AS total FROM emprunt WHERE id_membre = $id_membre";
+        $result = mysqli_query(dbconnect(), $requete);
+        $row = mysqli_fetch_assoc($result);
+        return $row['total'];
+    }
 ?>
