@@ -12,6 +12,7 @@
         <p>Nom : <input type="text" name="nom" placeholder="entrer votre nom"></p>\
         <p>Date de naissance : <input type="date" name="anniv"></p>
         <p>Genre : <input type="text" name="genre" ></p>
+        <p>Ville : <input type="text" name="ville"></p>
         <p>Mots de passe : <input type="password" name="mdp"></p>
     </form>
 </body>

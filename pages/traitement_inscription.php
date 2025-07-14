@@ -5,8 +5,7 @@
     $naissance=$_POST['anniv'];
     $genre=$_POST['genre'];
     $mdp=$_POST['mdp'];
-
-    
+    $ville=$_POST['ville'];
 
 
 
